@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Grenze Gotisch' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <title>odin's project</title>
+    <style>
+        #ff {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 4fr 1fr;
+        width: 100%;
+        height: 100%;
+        }
+        #header {
+        border-bottom: solid 1px gray;
+        height: 110px;
+        width:auto;
+        grid-column:1 / 4;
+        grid-row: 1 / 2;
+        padding: 13px;
+        self-align: center;
+        margin-top: -30px;
+        }
+        i {
+        font-size: 23px;
+        color: gray;
+        self-align: center;
+        }
+        #main {
+        grid-column:1 / 1;
+        grid-row: 2 / 3;
+        text-align: left;
+        margin-left: 120px;
+        margin-top: -30px;
+
+
+        }
+        #footer {
+        grid-column:1 / 1;
+        grid-row: 3 / 4;
+        text-align: center;
+        }
+       .pre-res {
+       text-align: left;
+       font-size: 12px;
+       color: gray;
+       margin-bottom: -20px;
+       }
+       .result {
+       text-align: left;
+       font-size: 22px;
+       margin-bottom: -13px;
+       }
+       .aft-res {
+        text-align: left;
+        font-size: 15px;
+        margin-bottom: 22px;
+        word-wrap: break-word;
+       }
+       #ef > a {
+       margin-left: 6px;
+       margin-right: 6px;
+       }
+    </style>
+    <script src="https://kit.fontawesome.com/49af0cf2ee.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="ff">
+  <div id="header">
+      <p style="display: inline-block; font-size:30px;"><b style="color: blue;">G</b><span style="color: red;">o</span><span style="color: #FFF000;">o</span><span style="color: blue;">g</span><span style="color: green;">l</span><span style="color: red;">e</span>
+      <input type="text" value="build this web page" style="border: outset 2px; border-radius: 20px; width: 500px; height: 30px; margin-left: 30px; padding: 6px; ">
+      <a href="#header" ><i class="fas fa-search" style="justify-content:flex-start; margin-left: -32px; font-size: 20px; color:gray;"></i></a>
+      <a href="#" style="margin-left: 1100px; margin-top: 500px; width: 30px;"> <i class="fas fa-th" style=" color: gray;"></i> <a/>
+      <a href="#" style=" text-align: right;"><img style="height: 30px; width: 30px; margin-bottom:-5px; margin-left: 7px; text-align: end;" src="data:image/png;base64,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"></a>
+          <br>
+      <a style="margin-left: 140px;" href="" ><i class="fas fa-microphone"></i></a> voice search
+      <a href=" "><i class="fas fa-map" style="padding-left: 15px; color:gray;"></i></a> google maps
+      <a href=" "><i class="fas fa-video" style="padding-left: 15px; color: gray;"></i></a> videos
+
+  </div>
+  <div id="main">
+    <p style="color: gray; font-size: 16px; margin-top: -10px; margin-left: 10px;"> About 0.0000 results (10.87 seconds)</p>
+      <p class="pre-res">Pagesvictor-lf.github.io › google-search-results</p>
+    <a href="#"><p class="result">build this webpage - Github</p></a>
+      <p class="aft-res"><b>build this webpage</b> https://benjdelt.github.io/google-results/. With zero coding experience,
+          <br>artist building 180 webpages in 180 days ...</p>
+      <p class="pre-res">Pageschristine-27.github.io › google-homepage</p>
+      <a href="#"><p class="result">build this webpage - GitHub Pages</p></a>
+      <p class="aft-res">With zero coding experience, artist building 180 <b>webpages</b> in 180 days.<br> hhttps://arstechnica.com/.../with-zero-coding-experience-artist-<b>building-180-webpages-</b>.</p>
+      <p class="pre-res">The Complete Beginner's Guidewww.websitebuilderexpert.com › building-websites</p>
+      <a href="#"><p class="result">How to Build a Website 2020 | The Complete Beginner's Guide</p></a>
+      <p class="aft-res">Jun 5, 2020 - How to <b>Build</b> a <b>Website</b>: the Step-by-Step Guide to Easy Setup. We'll look at <br>how to make a <b>website</b> with both a website builder and WordPress, ...</p>
+      <p class="pre-res">www.websitebuilderexpert.com › building-websites Traducir esta página</p>
+      <a href="#"><p class="result">How to Build a Website 2020 | The Complete Beginner's Guide</p></a>
+      <p class="aft-res">5 jun. 2020 - How to Build a Website: the Step-by-Step Guide to Easy Setup. We'll look at how to make a website with both a website builder and WordPress, ...</p>
+      <p class="pre-res">PCMagwww.pcmag.com › ... › Web Hosting</p>
+      <a href="#"><p  class="result" >How to Create a Website</p></a>
+      <p class="aft-res">If you need to quickly <b>build</b> a simple website, starting with a blogging service is a great way to go. The major player in the blog game is WordPress, a content ...</p>
+      <p class="pre-res">Website Builderwww.squarespace.com</p>
+      <a href="#"><p class="result">Squarespace: Build a Website</p></a>
+      <p class="aft-res">Squarespace is the all-in-one solution for anyone looking to create a beautiful website. Domains, eCommerce,hosting, galleries, analytics, and 24/7 support all ...</p>
+      <p class="pre-res">Website.comwww.website.com</p>
+      <a href="#"><p class="result">Create Your Website for Free | Free Site Builder |</p></a>
+      <p class="aft-res">Domain names, web hosting, website templates, and ecommerce solutions ... <b>Build</b> your brand identity and increase your credibility with your own custom .</p>
+      <p class="pre-res">Google My Businesswww.google.com › business › how-it-works › website</p>
+     <a href="#"><p class="result">Free Website Builder For Your Business</p></a>
+      <p class="aft-res">Let Google <b>build</b> your first website for free. We'll help you create a beautiful website to impress and engage new customers – and establish your business online.</p>
+        <p style="color: gray; font-size: 20px;">Searches related to build this webpage</p>
+      <a href="#" style="display: inline;">how to build a website from scratch</a>
+      <a href="#" style="margin-left: 15px;">how to create website pdf</a>
+      <br>
+      <a href="#" style="display: block-inline;">build a website free</a>
+      <a href="#" style="margin-left: 15px;">project on website develobment</a>
+      <br>
+      <a href="#" style="display: block-inline;">wix</a>
+      <a href="#" style="margin-left: 115px;">build free personal website</a>
+      <label> </label>
+</div>
+
+    <div id="footer">
+        <label style="font-size: 50px;"><b style="color: blue">G</b><span style="color:yellow ;">o</span><span style="color:orange;">o</span><span style="color:orange;">o</span><span style="color:orange;">o</span><span style="color:orange;">o</span><span style="color:blue;">g</span><span style="color:green;">l</span><span style="color:red;">e</span></label>
+        <div id="ef" style="margin-left: 3px;">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        </div>
+        <footer style="background-color: #D3D3D3;
+        border-top: solid 2px #D3D3D3;
+        margin-left: -10px;
+        padding-right: 150px;
+        height: 40%;
+        margin-top:25px;
+        padding-bottom:40px;
+        width: 100%;"><p style="border-right: solid 1px gray; display: inline; color: gray; padding-right: 5px;">Iraq</p><p style="color: gray; display: inline; padding-left: 3px">●<b>Mansour,baghdad</b> - Based on your past activity - Use precise location - <a href="#" style="color: gray;"> Learn more</a></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
